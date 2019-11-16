@@ -1,7 +1,7 @@
 //worker.cpp
 #include"worker.h"
 using namespace std;
-worker::Worker()
+worker::worker()
 {
 	setExp(0);
 	setPay(0);

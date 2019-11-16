@@ -5,8 +5,8 @@
 class worker {
 	public:
 		//constructors
-		Worker();
-		Worker(int, double, int);
+		worker();
+		worker(int, double, int);
 		//mutators
 		void setExp(int);
 		void setPay(double);
