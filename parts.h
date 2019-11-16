@@ -4,8 +4,8 @@
 class parts {
 	public:
 		//constructor
-		Parts();
-		Parts(double);
+		parts();
+		parts(double);
 		//mutators
 		void setPrice(double);
 		//accessors
