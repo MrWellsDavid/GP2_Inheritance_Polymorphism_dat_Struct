@@ -1,4 +1,4 @@
-//junk.h#pragma once
+//junk.h
 
 using namespace std;
 

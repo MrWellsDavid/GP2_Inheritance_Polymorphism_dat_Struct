@@ -1,4 +1,4 @@
-//worker.h#pragma once
+//worker.h
 
 using namespace std;
 

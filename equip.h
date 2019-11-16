@@ -1,4 +1,4 @@
-//equip.h#pragma once
+//equip.h
 
 #include <string>
 using namespace std;

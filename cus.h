@@ -1,4 +1,4 @@
-//cus.h#pragma once
+//cus.h
 
 #include "junk.h"
 

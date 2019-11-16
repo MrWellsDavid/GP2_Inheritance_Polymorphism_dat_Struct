@@ -1,4 +1,4 @@
-//man.h#pragma once
+//man.h
 
 using namespace std;
 

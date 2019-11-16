@@ -1,4 +1,4 @@
-//parts.h#pragma once
+//parts.h
 #ifndef PARTS_H
 #define PARTS_H
 class parts {

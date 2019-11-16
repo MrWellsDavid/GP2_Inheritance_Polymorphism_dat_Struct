@@ -1,4 +1,4 @@
-//user.h#pragma once
+//user.h
 #ifndef USER_H
 #define USER_H
 #include <string>

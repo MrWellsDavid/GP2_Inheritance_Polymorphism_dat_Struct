@@ -1,4 +1,4 @@
-//emp.h#pragma once
+//emp.h
 
 using namespace std;
 
