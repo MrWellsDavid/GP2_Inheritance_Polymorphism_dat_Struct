@@ -2,15 +2,14 @@
 #ifndef CUS_H
 #define CUS_H
 
-public:
+class cus {
+	public:
+
+	private:
+		cptr* junk;
 	
-
-
-private:
-	cptr* junk;
-
-protected:
-
-
+	protected:
+		
+};
 
 #endif
