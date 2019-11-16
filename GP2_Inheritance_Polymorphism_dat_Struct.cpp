@@ -12,6 +12,8 @@
 #include "worker.h"
 #include <string>
 
+using namespace std;
+
 void loginMenu() {
 	string uName, pWord;
 	cout << "==================== Login ===================="
