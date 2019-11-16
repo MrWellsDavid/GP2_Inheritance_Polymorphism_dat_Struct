@@ -1,16 +1,19 @@
 //parts.h#pragma once
+
+using namespace std;
+
 #ifndef PARTS_H
 #define PARTS_H
 
-public:
+class parts {
+	public:
 
 
-
-private:
-
-
-protected:
-
-
+	private:
+	
+	
+	protected:
+		
+};
 
 #endif

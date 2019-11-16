@@ -10,9 +10,21 @@
 #include "junk.h"
 #include "parts.h"
 #include "worker.h"
-int main()
-{
-    std::cout << "Hello World!\n";
+#include <string>
+
+void loginMenu() {
+	string uName, pWord;
+	cout << "==================== Login ===================="
+		 << "\n\n\tUsername: ";
+	cin >> uName;
+	cout << "\n\tPassword: ";
+	cin >> pWord;
+}
+
+int main() {
+	loginMenu();
+	
+	return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

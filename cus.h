@@ -1,16 +1,19 @@
-//cus.h#pragma once
+//cus.h
+
+#include"junk.h"
+using namespace std;
+
 #ifndef CUS_H
 #define CUS_H
 
-public:
-
-
-
-private:
-	cptr* junk;
-
-protected:
-
-
+class cus {
+	public:
+		
+	private:
+		junk* cPTR; 
+		
+	protected:
+		
+};
 
 #endif

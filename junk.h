@@ -1,17 +1,17 @@
 //junk.h#pragma once
+
+using namespace std;
+
 #ifndef JUNK_H
 #define JUNK_H
 
-public:
-
-
-
-private:
-
-
-
-protected:
-
-
+class junk {
+	public:
+		
+	private:
+		
+	protected:
+		
+};
 
 #endif
