@@ -1,19 +1,22 @@
 //parts.h#pragma once
-
-using namespace std;
-
 #ifndef PARTS_H
 #define PARTS_H
 
-class parts {
-	public:
+public:
+	//constructor
+	Parts();
+	Parts(double);
+	//mutators
+	void setPrice();
+	//accessors
+	double getPrice() const;
+
+private:
+	double price;
+	
+
+protected:
 
 
-	private:
-	
-	
-	protected:
-		
-};
 
 #endif
