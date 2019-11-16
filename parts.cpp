@@ -1,14 +1,14 @@
 //parts.cpp
 #include"parts.h"
 
-Parts::Parts()
+parts::Parts()
 {
 	setPrice(0);
 }
 
-Parts::setPrice(double price)
+void parts::setPrice(double price)
 {
 	this ->price = price;
 }
 
-double Parts::getPrice() const{return price;}
+double parts::getPrice() const{return price;}
