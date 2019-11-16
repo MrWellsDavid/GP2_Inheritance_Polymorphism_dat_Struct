@@ -12,8 +12,10 @@ public:
 
 	//accesssors
 	string print() const; //this will return all attribute values
-	string getname() const; // this will return only the names
+	string getName() const; // this will return only the names
 	int getID() const; //and returns the . . .
+	string view() const;
+	string getIDString() const;
 
 	//mutators
 	void setName(string, string);
@@ -23,8 +25,8 @@ private:
 
 	string username;
 	int id;
-	string f;
-	string l;
+	string first;
+	string last;
 };
 
 

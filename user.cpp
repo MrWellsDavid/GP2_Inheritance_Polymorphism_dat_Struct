@@ -1,11 +1,13 @@
 //user.cpp
 #include "user.h"
+#include "sstream"
+using namespace std;
 
 //constructors
 
 user::user() {
 	setName("", "");
-	setID("");
+	setID(0);
 }
 user::user(string f, string l, int id) {
 	setName(f, l);
@@ -13,17 +15,25 @@ user::user(string f, string l, int id) {
 }
 //mutators 
 void user::setName(string first, string last) {
-	this->first = first;
-	thist->last = last;
+	this -> first = first;
+	this -> last = last;
 }
 void user::setID(int id) {
 	this->id = id;
 }
 
 //accessors 
-string user::view()const {
-	return "Name:" + first + " " + last + "\n \t\t\t ID: " + id;
+string user::view() const {
+	string message = "Name:" + first + " " + last + "\n \t\t\t ID: " + getIDString();
+	return message;
 
 }
 string user::getName() const { return first + " " + last; }
-string user::getID()const { return id; }
+int user::getID()const { return id; }
+
+string user::getIDString() const {
+	stringstream ID;
+	ID << id;
+	string message = ID.str();
+	return message;
+}
