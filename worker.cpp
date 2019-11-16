@@ -1,28 +1,28 @@
 //worker.cpp
 #include"worker.h"
-
-Worker::Worker()
+using namespace std;
+worker::Worker()
 {
 	setExp(0);
 	setPay(0);
 	setSec(0);
 }
 
-void Worker::setExp(int exp)
+void worker::setExp(int exp)
 {
 	this ->exp = exp;
 }
 
-void Worker::setPay(double pay)
+void worker::setPay(double pay)
 {
 	this ->pay = pay;
 }
 
-void Worker::setSec(int security)
+void worker::setSec(int security)
 {
 	this ->security = security;
 }
 
-int Worker::getExp() const{return exp;}
-double Worker::getPay() const{return pay;}
-int Worker::setSec() const{return security;}
+int worker::getExp() const{return exp;}
+double worker::getPay() const{return pay;}
+int worker::getSec() const{return security;}
