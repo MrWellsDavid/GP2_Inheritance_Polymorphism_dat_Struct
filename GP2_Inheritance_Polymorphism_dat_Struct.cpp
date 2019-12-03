@@ -25,6 +25,8 @@ void loginMenu() {
 
 int main() {
 	loginMenu();
+	// create logic if successful log in of emp then continues to ticket
+	// successfull of report then login to any
 	
 	return 0;
 }

@@ -16,7 +16,7 @@ public:
 	int getCaseID()const {
 		return caseID;
 	}
-	string getCaseIDString()const {
+	string getCaseIDString()const { //changes case id into a string
 		return caseIDString;
 	}
 	string getTimeSpent()const {
@@ -28,16 +28,15 @@ public:
 	void setTimeSpent(string);
 	void clearTicket();
 private:
-
-	int status;
-	int hr_in;
-	int min_in;
-	int hr_out;
-	int min_out;
+	string caseIDString
+	int caseID
+	int rStatus;// repair status 
+	int clockIn
+	int clockOut
 	string timeFlagged;
 	
 
-
+	//things to do: change id int into string, create 
 
 
 #endif
