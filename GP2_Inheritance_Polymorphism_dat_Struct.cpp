@@ -24,7 +24,10 @@ void loginMenu() {
 }
 
 int main() {
-	loginMenu();
+	equip a;
+	a.setSN(9);
+	cout << a.getSNString();
+	//loginMenu();
 	// create logic if successful log in of emp then continues to ticket
 	// successfull of report then login to any
 	
