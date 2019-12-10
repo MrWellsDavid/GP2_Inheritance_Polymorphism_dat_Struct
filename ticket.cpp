@@ -4,20 +4,20 @@ using namespace std;
 
 //constructors
 ticket::ticket() {
-	int status = 0;
-	int hr_in = 0;
-	int min_in = 0;
-	int hr_out = 0;
-	int min_out = 0;
+	string caseIDString = " ";
 	string timeFlagged = " ";
+	int caseID = 0;
+	string rStatus = " ";// repair status 
+	string clockIn = " ";
+	string clockOut = " ";
 }
-ticket::setTicket(int s, int hi, int mi, int ho, int mo, string tf) {
-	int status = s;
-	int hr_in = hi;
-	int min_in = mi;
-	int hr_out = ho;
-	int min_out = mo;
-	string timeFlagged ="tf";
+ticket::setTicket(string idS, string tf, string rs, string ci, string co, int id) {
+	string caseIDString = "idS";
+	string timeFlagged = "tf";
+	int caseID = id;
+	string rStatus = "rs";// repair status 
+	string clockIn = "ci";
+	string clockOut = "co";
 }
 void ticket::clearTicket() {// for reseting the ticket
 	int status = 0;
@@ -27,13 +27,33 @@ void ticket::clearTicket() {// for reseting the ticket
 	int min_out = 0;
 	string timeFlagged = " ";
 }
-//timeSpent(time); // this needs to be checked by barron
-
 //accesssors
-int ticket::getCaseID();
-string ticket::getCaseIDString();
-string ticket::getTimeSpent();
+int getCaseID()const {
+	return caseID;
+}
+string getCaseIDString()const { //changes case id into a string
+	return caseIDString;
+}
+string getClockIn()const {
+	return clockOut;
+}
+string getClockOut()const {
+	return clockIn;
+}
 //mutators
-void setTo(worker*) // not sure if this is correct, needs barron to check
+void setTicket(int, string, string, string, string /*worker&*/); // not sure if this is correct, needs barron to check
 void setCaseID(int);
-void setTimeSpent();
+void setClockIn(int);
+void setClockOut(int);
+void clearTicket();
+private:
+	string caseIDString;
+	string timeFlagged;
+	int caseID;
+	string rStatus;// repair status 
+	string clockIn;
+	string clockOut;
+
+
+
+	//things to do: change id int into string, create 
