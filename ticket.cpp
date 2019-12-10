@@ -20,12 +20,12 @@ ticket::setTicket(string idS, string tf, string rs, string ci, string co, int id
 	string clockOut = "co";
 }
 void ticket::clearTicket() {// for reseting the ticket
-	int status = 0;
-	int hr_in = 0;
-	int min_in = 0;
-	int hr_out = 0;
-	int min_out = 0;
+	string caseIDString = " ";
 	string timeFlagged = " ";
+	int caseID = 0;
+	string rStatus = " ";// repair status 
+	string clockIn = " ";
+	string clockOut = " ";
 }
 //accesssors
 int getCaseID()const {

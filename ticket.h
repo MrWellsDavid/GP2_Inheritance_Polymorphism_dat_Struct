@@ -1,7 +1,12 @@
 //ticket.h #pragma once
 #ifndef TICKET_H
 #define TICKET_H
+
 #include <string>
+#include <iostream>
+#include <ctime>
+#include <sstream>
+#include <fstream>
 
 using namespace std;
 

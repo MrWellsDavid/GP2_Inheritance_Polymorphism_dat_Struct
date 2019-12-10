@@ -14,13 +14,70 @@
 
 using namespace std;
 
-void loginMenu() {
+// possibly build these out of main ?
+int findUser(user**, int, string);
+bool startMenu(user**, int&, int);
+int loginMenu();
+
+
+
+int loginMenu() {
 	string uName, pWord;
 	cout << "==================== Login ===================="
 		 << "\n\n\tUsername: ";
 	cin >> uName;
 	cout << "\n\tPassword: ";
 	cin >> pWord;
+	return pWord;
+}
+bool startLogin(user** uPTR, int& log, int usr) { // usr is the number of people in the system to check against
+	int pos;
+	string uName, pWord;// uName and pWord are for eacher individual user
+	bool access = false;
+	int denyCount = 3; // Number of times that someone can enter a wront password
+
+	cout << "\n Login"
+		<< "User Name:\t";
+		cin >> uName;
+	pos = findUsr(uPTR, usr, uName);
+	if (pos != -1) {
+		cout << "\n \t Password: ";
+		cin >> pWord;
+		access = checkPWORD(uPTR, pWord, pos);
+		do {
+			if (access == true) {
+				cout << "\n\n\n \t Welcome.\n\n\n";
+				system("PAUSE");
+				log = pos;
+				return true;
+			}
+			else {
+				cout << "DENIED\n"
+					<< "you have tried:" << denyCount << "attemps MAY be limited"
+					<< "enter the password you now remember:";
+				cin >> pWord;
+				denyCount++;
+			}
+			access = checkPWORD(uPTR, pWord, pos);
+		} while denyCount <= 5);
+		if (access == true) {
+			cout << "\n\n\n \t Welcome.\n\n\n";
+			system("PAUSE");
+			log = pos;
+			return true;
+		}
+	}
+	else
+		cout << " \nuser not found\n";
+	return false;
+}
+int findUser(user** uPTR, int usrnum, string name){//usrnum is the size of the users array
+	for (int i = 0; i < usrnum; i++){
+		if ((*uPTR)->getID() == name)
+			return i;
+		uPTR++;
+	}
+	return-1;
 }
 
 int main() {

@@ -19,14 +19,23 @@ public:
 
 	//mutators
 	void setName(string, string);
-	void setID(int);
+	void setPassword(string);
+	void setUserID(int, string);
+	void setUserID(string, string);
+	void setUserID(string)
+	//void setID(int);
 
 private:
 
-	string username;
+	
+
+protected:
+	string uName;
+
 	int id;
 	string first;
 	string last;
+	
 };
 
 
