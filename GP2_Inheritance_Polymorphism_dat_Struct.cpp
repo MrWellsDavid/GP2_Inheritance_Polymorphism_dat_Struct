@@ -15,13 +15,13 @@
 using namespace std;
 
 // possibly build these out of main ?
-int findUser(user**, int, string);
+int findUsr(user**, int, string);
 bool startMenu(user**, int&, int);
-int loginMenu();
+string loginMenu();
+bool checkPWord(user**, string, int);
 
 
-
-int loginMenu() {
+string loginMenu() {
 	string uName, pWord;
 	cout << "==================== Login ===================="
 		 << "\n\n\tUsername: ";
@@ -43,7 +43,7 @@ bool startLogin(user** uPTR, int& log, int usr) { // usr is the number of people
 	if (pos != -1) {
 		cout << "\n \t Password: ";
 		cin >> pWord;
-		access = checkPWORD(uPTR, pWord, pos);
+		access = checkPWord(uPTR, pWord, pos);
 		do {
 			if (access == true) {
 				cout << "\n\n\n \t Welcome.\n\n\n";
@@ -58,8 +58,8 @@ bool startLogin(user** uPTR, int& log, int usr) { // usr is the number of people
 				cin >> pWord;
 				denyCount++;
 			}
-			access = checkPWORD(uPTR, pWord, pos);
-		} while denyCount <= 5);
+			access = checkPWord(uPTR, pWord, pos);
+		} while (denyCount <= 5);
 		if (access == true) {
 			cout << "\n\n\n \t Welcome.\n\n\n";
 			system("PAUSE");
@@ -71,7 +71,7 @@ bool startLogin(user** uPTR, int& log, int usr) { // usr is the number of people
 		cout << " \nuser not found\n";
 	return false;
 }
-int findUser(user** uPTR, int usrnum, string name){//usrnum is the size of the users array
+int findUsr(user** uPTR, int usrnum, string name){//usrnum is the size of the users array
 	for (int i = 0; i < usrnum; i++){
 		if ((*uPTR)->getID() == name)
 			return i;
@@ -79,7 +79,11 @@ int findUser(user** uPTR, int usrnum, string name){//usrnum is the size of the u
 	}
 	return-1;
 }
-
+bool checkPWord(user** uPTR, string pass, int pos) {
+	if ((*uPTR[pos]).getPWord() == pass)
+		return true;
+	return false;
+}
 int main() {
 	equip a;
 	a.setSN(9);

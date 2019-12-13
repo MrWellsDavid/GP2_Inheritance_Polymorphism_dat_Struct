@@ -18,8 +18,8 @@ class equip {
 		void setDescription(string);	
 	
 	private:
-		int sn;
-		int status;
+	//	int sn;
+	//	int status;
 		string name;
 		string description;
 		

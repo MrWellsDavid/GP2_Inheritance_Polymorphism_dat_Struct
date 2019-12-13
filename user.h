@@ -13,16 +13,18 @@ public:
 	//accesssors
 	string print() const; //this will return all attribute values
 	string getName() const; // this will return only the names
-	int getID() const; //and returns the . . .
+	string getID();
+	string getPWord();
 	string view() const;
-	string getIDString() const;
+	//string getIDString() const; 
+	int getIDNum(int);
 
 	//mutators
 	void setName(string, string);
 	void setPassword(string);
-	void setUserID(int, string);
-	void setUserID(string, string);
-	void setUserID(string)
+	void setID(int, string);
+	void setID(string, string);
+	void setID(string);
 	//void setID(int);
 
 private:
@@ -31,8 +33,8 @@ private:
 
 protected:
 	string uName;
-
-	int id;
+	string uID;
+	int id; //for incrementation
 	string first;
 	string last;
 	
