@@ -1,11 +1,13 @@
 //equip.h
 #include <string>
+
 #ifndef EQUIP_H
 #define EQUIP_H
 using namespace std;
 
 class equip {
 	public:
+		equip();
 		int getSN()const;
 		int getStatus()const;
 		string getSNString()const;
@@ -18,12 +20,13 @@ class equip {
 		void setDescription(string);	
 	
 	private:
-	//	int sn;
-	//	int status;
-		string name;
-		string description;
+	
 		
 	protected:	
+		int sn;
+		int status;
+		string name;
+		string description;
 };
 
 #endif

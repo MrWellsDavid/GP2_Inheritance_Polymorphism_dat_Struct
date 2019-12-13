@@ -5,6 +5,11 @@
 
 using namespace std;
 
+equip::equip() {
+	setSN(0);
+	setStatus(0);
+}
+
 //getters
 int equip::getSN()const{
 	return sn;
