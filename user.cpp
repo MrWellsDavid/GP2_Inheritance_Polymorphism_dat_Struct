@@ -36,7 +36,7 @@ void user::setID(string wholeID)
 	usrID = wholeID;
 }
 //accessors 
-string user::view() const {
+string user::view()  {
 	string message = "Name:" + first + " " + last + "\n \t\t\t ID: " + getIDString();
 	return message;
 
@@ -44,10 +44,10 @@ string user::view() const {
 string user::getName()  { return first + " " + last; }
 string user::getID() { return usrID; }
 int user::getIDNum(int num) { return idNum; }
-
+string user::getPWord() { return pWord; }
 string user::getIDString()  {
 	stringstream ID;
-	ID << id;
+	ID << usrID;
 	string message = ID.str();
 	return message;
 }

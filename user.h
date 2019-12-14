@@ -15,9 +15,9 @@ public:
 	string getName(); // this will return only the names
 	string getID();
 	string getPWord();
-	string view() const; 
+	string view() ; 
 	int getIDNum(int); // increments the previous ID issued
-
+	string getIDString();
 	//mutators
 	void setName(string, string);
 	void setPWord(string);
@@ -33,6 +33,7 @@ private:
 protected:
 	string uName;
 	string usrID;
+	string pWord;
 	int idNum; //for incrementation
 	string first;
 	string last;
