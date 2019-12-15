@@ -10,7 +10,7 @@ class parts: public equip {
 	public:
 		//constructors
 		parts();
-		parts(double);
+		parts(double, int, string, string);
 		
 		//mutators
 		void setPrice(double);

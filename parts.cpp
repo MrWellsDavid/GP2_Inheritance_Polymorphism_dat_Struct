@@ -1,14 +1,25 @@
 //parts.cpp
-#include"parts.h"
 
-/*parts::Parts()
-{
+#include"parts.h"
+using namespace std;
+
+//Constructors
+parts::parts() {
+	equip();
 	setPrice(0);
 }
 
-void parts::setPrice(double price)
-{
-	this ->price = price;
+parts::parts(double price, int sn, string name, string description) {
+	equip(sn, name, description);
+	setPrice(price);
 }
 
-double parts::getPrice() const{return price;}*/
+//Mutators
+void parts::setPrice(double price) {
+	this -> price = price;
+}
+
+//Accessors
+double parts::getPrice() const {
+	return price;
+}
