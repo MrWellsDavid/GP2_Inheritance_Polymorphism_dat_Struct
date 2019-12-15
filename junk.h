@@ -16,14 +16,15 @@ class junk: public equip {
 		junk(int, string, string);
 		
 		//Mutator
-		void setAssignee(worker);
+		void setAssignee(worker*);
+		void removeAssignee(worker*);
 		
 		//Accessor
 		worker* getAsignee();
 		
 	private:
-		vector<worker> assignee;
-		vector<worker>::iterator iter;
+		vector<worker*> assignee;
+		vector<worker*>::iterator iter;
 };
 
 #endif
