@@ -9,11 +9,10 @@ public:
 	user();
 	user(string, string, int);
 
-
 	//accesssors
 	string print() const; //this will return all attribute values
 	string getName(); // this will return only the names
-	string getID();
+	int getID();
 	string getPWord();
 	string view() ; 
 	int getIDNum(int); // increments the previous ID issued
@@ -21,18 +20,14 @@ public:
 	//mutators
 	void setName(string, string);
 	void setPWord(string);
-	void setID(int, string);
-	void setID(string, string);
-	void setID(string);
+	void setID(int);
 	
 
 private:
 
-	virtual void print() = 0;
-
-protected:
+	void print();
 	string uName;
-	string usrID;
+	int usrID;
 	string pWord;
 	int idNum; //for incrementation
 	string first;

@@ -1,7 +1,8 @@
 //cus.h
 
 #include "junk.h"
-
+#include <vector>
+#include <iterator>
 using namespace std;
 
 #ifndef CUS_H
@@ -9,12 +10,14 @@ using namespace std;
 
 class cus {
 	public:
-
-	private:
-		junk* cPTR;
-	
-	protected:
+		//contructors
+		cus();
+		//mutators
 		
+		//accessors
+	private:
+		vector<junk> stuff;
+		vector<junk>::iterator iter;
 };
 
 #endif
