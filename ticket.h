@@ -4,7 +4,7 @@
 
 #include <string>
 #include <iostream>
-#include <ctime>
+//#include <ctime>
 #include <sstream>
 #include <fstream>
 
@@ -14,36 +14,28 @@ class ticket {
 public:
 	//constructors
 	ticket();
-	ticket(int, string, string, string, string);
 	
-
-	//accesssors
-	int getCaseID()const {
-		return caseID;
-	}
-	string getCaseIDString()const { //changes case id into a string
-		return caseIDString;
-	}
-	string getClockIn()const {
-		return clockOut;
-	}
-	string getClockOut()const {
-		return clockIn;
-	}
-	//mutators
-	void setTicket(int, string, string, string, string /*worker&*/); // not sure if this is correct, needs barron to check
-	void setCaseID(int);
-	void setClockIn(int);
-	void setClockOut(int);
-	void clearTicket();
+	
+	
+	//mutator
+	void setTimeSpent();
+	void setCaseID();
+	void setCaseIDString();
+	//accessor
+	int getCaseID() const{return caseID;}
+	string getCaseIDString()const{return caseIDString;}
+	char getTimeSpent()const{return timeSpent;}
+	string getStatus()const{return status;}
+	//int getStatusString()const{return statusString;}
 private:
 	string caseIDString;
 	string timeFlagged;
 	int caseID;
 	string rStatus;// repair status 
-	string clockIn;
-	string clockOut;
-	
+	char clockIn;
+	char clockOut;
+	char timeSpent ;
+};
 	
 
 	//things to do: change id int into string, create 

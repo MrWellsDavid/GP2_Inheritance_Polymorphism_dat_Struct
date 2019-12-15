@@ -11,6 +11,8 @@
 #include "parts.h"
 #include "worker.h"
 #include <string>
+// testing 
+#include <ctime>
 
 using namespace std;
 
@@ -19,8 +21,18 @@ int findUsr(user**, int, string);
 bool startMenu(user**, int&, int);
 string loginMenu();
 bool checkPWord(user**, string, int);
+bool checkUsrdata(); // this checks for userFile.txt
 
 
+bool checkUsrdata() {
+	ifstream usrDataIn("userFile.txt");
+	if (usrDataIn.good()) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
 string loginMenu() {
 	string uName, pWord;
 	cout << "==================== Login ===================="
@@ -85,9 +97,22 @@ bool checkPWord(user** uPTR, string pass, int pos) {
 	return false;
 }
 int main() {
-	equip a;
-	a.setSN(9);
-	cout << a.getSNString();
+
+
+	time_t curr_time;
+	tm * curr_tm;
+	char date_time[100];
+	time(&curr_time);
+	curr_tm = localtime(&curr_time);
+	strftime(date_time,50,"%m/%d/%Y %H:%M:%S", curr_tm);
+	cout<<date_time<<endl;
+	
+
+
+	
+//	equip a;
+//	a.setSN(9);
+	//cout << a.getSNString();
 	//loginMenu();
 	// create logic if successful log in of emp then continues to ticket
 	// successfull of report then login to any
