@@ -3,9 +3,17 @@
 using namespace std;
 worker::worker()
 {
+	user();
 	setExp(0);
 	setPay(0);
 	setSec(0);
+}
+
+worker::worker(string first, string last, int id, int exp, double pay) {
+	user(first, last, id);
+	setSec(0);
+	setExp(exp);
+	setPay(pay);
 }
 
 void worker::setExp(int exp)

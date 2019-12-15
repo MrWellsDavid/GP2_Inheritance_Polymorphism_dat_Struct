@@ -11,8 +11,6 @@
 #include "parts.h"
 #include "worker.h"
 #include <string>
-// testing 
-#include <ctime>
 
 using namespace std;
 
@@ -21,18 +19,8 @@ int findUsr(user**, int, string);
 bool startMenu(user**, int&, int);
 string loginMenu();
 bool checkPWord(user**, string, int);
-bool checkUsrdata(); // this checks for userFile.txt
 
 
-bool checkUsrdata() {
-	ifstream usrDataIn("userFile.txt");
-	if (usrDataIn.good()) {
-		return true;
-	}
-	else {
-		return false;
-	}
-}
 string loginMenu() {
 	string uName, pWord;
 	cout << "==================== Login ===================="
@@ -42,11 +30,12 @@ string loginMenu() {
 	cin >> pWord;
 	return pWord;
 }
+
 bool startLogin(user** uPTR, int& log, int usr) { // usr is the number of people in the system to check against
 	int pos;
 	string uName, pWord;// uName and pWord are for eacher individual user
 	bool access = false;
-	int denyCount = 3; // Number of times that someone can enter a wront password
+	int denyCount = 3; // Number of times that someone can enter a wrong password
 
 	cout << "\n Login"
 		<< "User Name:\t";
@@ -83,9 +72,9 @@ bool startLogin(user** uPTR, int& log, int usr) { // usr is the number of people
 		cout << " \nuser not found\n";
 	return false;
 }
-int findUsr(user** uPTR, int usrnum, string name){//usrnum is the size of the users array
+int findUsr(user** uPTR, int usrnum, string name){//usrnum is the size of the users vector
 	for (int i = 0; i < usrnum; i++){
-		if ((*uPTR)->getID() == name)
+		if ((*uPTR)->getName() == name)
 			return i;
 		uPTR++;
 	}
@@ -97,23 +86,7 @@ bool checkPWord(user** uPTR, string pass, int pos) {
 	return false;
 }
 int main() {
-
-
-	time_t curr_time;
-	tm * curr_tm;
-	char date_time[100];
-	time(&curr_time);
-	curr_tm = localtime(&curr_time);
-	strftime(date_time,50,"%m/%d/%Y %H:%M:%S", curr_tm);
-	cout<<date_time<<endl;
-	
-
-
-	
-//	equip a;
-//	a.setSN(9);
-	//cout << a.getSNString();
-	//loginMenu();
+	loginMenu();
 	// create logic if successful log in of emp then continues to ticket
 	// successfull of report then login to any
 	

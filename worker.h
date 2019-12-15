@@ -1,15 +1,16 @@
 //worker.h
 
+#include "user.h"
 using namespace std;
 
 #ifndef WORKER_H
 #define WORKER_H
 
-class worker {
+class worker: public user {
 	public:
 		//constructors
 		worker();
-		worker(int, double, int);
+		worker(string, string, int, int, double);
 		//mutators
 		void setExp(int);
 		void setPay(double);

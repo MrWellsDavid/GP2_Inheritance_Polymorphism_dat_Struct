@@ -8,9 +8,18 @@ using namespace std;
 equip::equip() {
 	setSN(0);
 	setStatus(0);
+	setName("NoName");
+	setDescription("None");
 }
 
-//getters
+equip::equip(int sn, string name, string description) {
+	setSN(sn);
+	setStatus(0);
+	setName("Name");
+	setDescription(description);
+}
+
+//Accessors
 int equip::getSN()const{
 	return sn;
 }
@@ -39,7 +48,7 @@ string equip::getStatusString()const{
 	return statstring.str();
 }
 
-//setters
+//Mutators
 
 void equip::setStatus(int status){
 	this -> status = status;
