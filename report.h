@@ -7,25 +7,25 @@ using namespace std;
 #define REPORT_H
 
 class report {
-public:
-	//constructors
-	report();
+	public:
+		//constructors
+		report();
+		
+		//accessors
+		bool getFlag();
+		string getConsumer();
+		string getEOD();
+		
+		//mutators
+		void setFlag(bool);
+		void setConsumer();
+		void setEOD();
 	
-	//accessors
-	string getFlag();
-	string getConsumer();
-	string getEOD();
-	
-	//mutators
-	void setFlag();
-	void setConsumer();
-	void setEOD();
-
-private:
-	bool hrFlag;
-	string consumerReport();
-	string endOfDay();
-	string incompleteEOD();
+	private:
+		bool hrFlag;
+		string consumerReport();
+		string endOfDay();
+		string incompleteEOD();
 };
 
 #endif
