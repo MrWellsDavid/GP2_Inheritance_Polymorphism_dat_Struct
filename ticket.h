@@ -1,52 +1,36 @@
-//ticket.h #pragma once
+//ticket.h
+
+#include <queue>
+#include <string>
+using namespace std;
+
 #ifndef TICKET_H
 #define TICKET_H
 
-#include <string>
-#include <iostream>
-#include <ctime>
-#include <sstream>
-#include <fstream>
-
-using namespace std;
-
 class ticket {
-public:
-	//constructors
-	ticket();
-	ticket(int, string, string, string, string);
-	
+	public:
+		//Constructors
+		ticket();
+		
+		//Mutators
+		setID();
+		setStatus();
+		closeTicket();
+		
+		//Accessors
+		int getID();
+		string getIDString();
+		int getStatus();
+		string getStatusString();
+		string creationDate();
+		string closeDate();
 
-	//accesssors
-	int getCaseID()const {
-		return caseID;
-	}
-	string getCaseIDString()const { //changes case id into a string
-		return caseIDString;
-	}
-	string getClockIn()const {
-		return clockOut;
-	}
-	string getClockOut()const {
-		return clockIn;
-	}
-	//mutators
-	void setTicket(int, string, string, string, string /*worker&*/); // not sure if this is correct, needs barron to check
-	void setCaseID(int);
-	void setClockIn(int);
-	void setClockOut(int);
-	void clearTicket();
-private:
-	string caseIDString;
-	string timeFlagged;
-	int caseID;
-	string rStatus;// repair status 
-	string clockIn;
-	string clockOut;
-	
-	
-
-	//things to do: change id int into string, create 
-
+	private:
+		int id;
+		int status;
+		string dateCreated;
+		string dateClosed;
+		//queue<note> notes;
+};
 
 #endif

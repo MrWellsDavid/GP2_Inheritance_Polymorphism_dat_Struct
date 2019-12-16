@@ -11,7 +11,7 @@ class emp: public worker {
 	public:
 		//Constructors
 		emp();
-		emp(string, string, int, int, double);
+		emp(string, string, int, int);
 		
 		//Accessors
 		string getIDString();

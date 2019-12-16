@@ -9,8 +9,8 @@ man::man() {
 	setSec(2);
 }
 
-man::man(string first, string last, int id, int exp, double pay) {
-	worker(first, last, id, exp, pay);
+man::man(string first, string last, int id, int exp) {
+	worker(first, last, id, exp);
 	setSec(2);
 }
 

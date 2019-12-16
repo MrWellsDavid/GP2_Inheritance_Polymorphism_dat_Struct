@@ -9,8 +9,8 @@ emp::emp() {
 	setSec(1);
 }
 
-emp::emp(string first, string last, int id, int exp, double pay) {
-	worker(first, last, id, exp, pay);
+emp::emp(string first, string last, int id, int exp) {
+	worker(first, last, id, exp);
 	setSec(1);
 }
 

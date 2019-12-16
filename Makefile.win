@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = cus.o emp.o equip.o junk.o man.o parts.o user.o worker.o GP2_Inheritance_Polymorphism_dat_Struct.o
-LINKOBJ  = cus.o emp.o equip.o junk.o man.o parts.o user.o worker.o GP2_Inheritance_Polymorphism_dat_Struct.o
+OBJ      = cus.o emp.o equip.o junk.o man.o parts.o user.o worker.o GP2_Inheritance_Polymorphism_dat_Struct.o report.o ticket.o note.o
+LINKOBJ  = cus.o emp.o equip.o junk.o man.o parts.o user.o worker.o GP2_Inheritance_Polymorphism_dat_Struct.o report.o ticket.o note.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -50,3 +50,12 @@ worker.o: worker.cpp
 
 GP2_Inheritance_Polymorphism_dat_Struct.o: GP2_Inheritance_Polymorphism_dat_Struct.cpp
 	$(CPP) -c GP2_Inheritance_Polymorphism_dat_Struct.cpp -o GP2_Inheritance_Polymorphism_dat_Struct.o $(CXXFLAGS)
+
+report.o: report.cpp
+	$(CPP) -c report.cpp -o report.o $(CXXFLAGS)
+
+ticket.o: ticket.cpp
+	$(CPP) -c ticket.cpp -o ticket.o $(CXXFLAGS)
+
+note.o: note.cpp
+	$(CPP) -c note.cpp -o note.o $(CXXFLAGS)

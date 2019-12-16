@@ -10,7 +10,7 @@ class man: public worker{
 	public:
 		//Constructors
 		man();
-		man(string, string, int, int, double);
+		man(string, string, int, int);
 		
 		//Accessors
 		string getIDString();

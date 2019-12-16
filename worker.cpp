@@ -9,11 +9,10 @@ worker::worker()
 	setSec(0);
 }
 
-worker::worker(string first, string last, int id, int exp, double pay) {
+worker::worker(string first, string last, int id, int exp) {
 	user(first, last, id);
 	setSec(0);
-	setExp(exp);
-	setPay(pay);
+	setPay(exp);
 }
 
 void worker::setExp(int exp)
@@ -21,9 +20,14 @@ void worker::setExp(int exp)
 	this ->exp = exp;
 }
 
-void worker::setPay(double pay)
+void worker::setPay(int exp)
 {
-	this ->pay = pay;
+	setExp(exp);
+	if (this -> exp < 10) {
+		this -> pay = 100.00 + ( this -> exp * 15.00);
+	} else {
+		pay = 250.00;
+	}
 }
 
 void worker::setSec(int security)

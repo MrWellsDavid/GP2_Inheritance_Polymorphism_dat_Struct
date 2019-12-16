@@ -6,10 +6,13 @@
 #include "user.h"
 #include "cus.h"
 #include "emp.h"
+#include "man.h"
 #include "equip.h"
 #include "junk.h"
 #include "parts.h"
 #include "worker.h"
+#include "report.h"
+#include "ticket.h"
 #include <string>
 
 using namespace std;

@@ -10,10 +10,10 @@ class worker: public user {
 	public:
 		//constructors
 		worker();
-		worker(string, string, int, int, double);
+		worker(string, string, int, int);
 		//mutators
 		void setExp(int);
-		void setPay(double);
+		void setPay(int);
 		void setSec(int);
 		//accessors
 		int getExp() const;

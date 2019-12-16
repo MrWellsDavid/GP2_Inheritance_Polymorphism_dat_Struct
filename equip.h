@@ -1,9 +1,9 @@
 //equip.h
 #include <string>
+using namespace std;
 
 #ifndef EQUIP_H
 #define EQUIP_H
-using namespace std;
 
 class equip {
 	public:
