@@ -79,7 +79,7 @@ bool startLogin(user** uPTR, int& log, int usr) { // usr is the number of people
 }
 int findUsr(user** uPTR, int usrnum, string uName) {//usrnum is the size of the users vector
 	for (int i = 0; i < usrnum; i++) {
-		if ((*uPTR)->getName() == uName)
+		if ((*uPTR)->usrID() == uName) // looks for a user name with the id incase there is someone with two of the same name
 			return i;
 		uPTR++;
 	}
