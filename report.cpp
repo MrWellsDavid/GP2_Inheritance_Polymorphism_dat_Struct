@@ -4,12 +4,33 @@
 using namespace std;
 
 //Constructors
-report() {
-	setFlag(false)
+report::report() {
+	setFlag(false);
 }
 
 //Mutators
+void report::setFlag(bool){
+	
+}
 
+void report::setConsumer(){
+	
+}
+
+void report::setEOD(){
+	
+}
 
 //Accessors
+bool report::getFlag(){
+	
+}
+
+string report::getConsumer(){
+	
+}
+
+string report::getEOD(){
+	
+}
 
