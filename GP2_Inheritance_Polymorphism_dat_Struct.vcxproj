@@ -18,6 +18,33 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cus.cpp" />
+    <ClCompile Include="emp.cpp" />
+    <ClCompile Include="equip.cpp" />
+    <ClCompile Include="junk.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="man.cpp" />
+    <ClCompile Include="note.cpp" />
+    <ClCompile Include="parts.cpp" />
+    <ClCompile Include="report.cpp" />
+    <ClCompile Include="ticket.cpp" />
+    <ClCompile Include="user.cpp" />
+    <ClCompile Include="worker.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cus.h" />
+    <ClInclude Include="emp.h" />
+    <ClInclude Include="equip.h" />
+    <ClInclude Include="junk.h" />
+    <ClInclude Include="man.h" />
+    <ClInclude Include="note.h" />
+    <ClInclude Include="parts.h" />
+    <ClInclude Include="report.h" />
+    <ClInclude Include="ticket.h" />
+    <ClInclude Include="user.h" />
+    <ClInclude Include="worker.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{64A665EC-4700-416F-B4DF-5DF2641DE368}</ProjectGuid>
@@ -150,9 +177,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="GP2_Inheritance_Polymorphism_dat_Struct.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

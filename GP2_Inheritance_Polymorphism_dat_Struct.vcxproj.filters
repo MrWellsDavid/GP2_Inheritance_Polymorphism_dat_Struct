@@ -15,8 +15,76 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GP2_Inheritance_Polymorphism_dat_Struct.cpp">
+    <ClCompile Include="cus.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="emp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="equip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="junk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="man.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="note.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="parts.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="report.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ticket.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="user.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="worker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cus.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="emp.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="equip.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="junk.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="man.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="note.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="parts.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="report.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ticket.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="user.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="worker.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
