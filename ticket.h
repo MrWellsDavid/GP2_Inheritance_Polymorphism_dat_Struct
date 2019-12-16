@@ -6,36 +6,10 @@
 //#include <ctime>
 #include <sstream>
 #include <fstream>
-
 using namespace std;
 
-class ticket {
-public:
-	//constructors
-	ticket();
-	
-	
-	
-	//mutator
-	void setTimeSpent();
-	void setCaseID();
-	void setCaseIDString();
-	//accessor
-	int getCaseID() const{return caseID;}
-	string getCaseIDString()const{return caseIDString;}
-	char getTimeSpent()const{return timeSpent;}
-	string getStatus()const{return status;}
-	//int getStatusString()const{return statusString;}
-private:
-	string caseIDString;
-	string timeFlagged;
-	int caseID;
-	string rStatus;// repair status 
-	char clockIn;
-	char clockOut;
-	char timeSpent ;
-};
-	
+#ifndef TICKET_H
+#define TICKET_H
 
 class ticket {
 	public:
@@ -47,6 +21,10 @@ class ticket {
 		setStatus();
 		closeTicket();
 		
+		void setTimeSpent();
+		void setCaseID();
+		void setCaseIDString();
+		
 		//Accessors
 		int getID();
 		string getIDString();
@@ -54,6 +32,12 @@ class ticket {
 		string getStatusString();
 		string creationDate();
 		string closeDate();
+		
+		int getCaseID() const{return caseID;}
+		string getCaseIDString()const{return caseIDString;}
+		char getTimeSpent()const{return timeSpent;}
+		//string getStatus()const{return status;}
+		//int getStatusString()const{return statusString;}
 
 	private:
 		int id;
@@ -61,6 +45,14 @@ class ticket {
 		string dateCreated;
 		string dateClosed;
 		//queue<note> notes;
+		
+		string caseIDString;
+		string timeFlagged;
+		int caseID;
+		string rStatus;// repair status 
+		char clockIn;
+		char clockOut;
+		char timeSpent ;
 };
 
 #endif
