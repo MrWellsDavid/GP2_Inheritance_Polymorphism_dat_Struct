@@ -5,6 +5,29 @@ VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GP2_Inheritance_Polymorphism_dat_Struct", "GP2_Inheritance_Polymorphism_dat_Struct.vcxproj", "{64A665EC-4700-416F-B4DF-5DF2641DE368}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CA72DDC7-791D-485C-B17C-5549D2EB5D07}"
+	ProjectSection(SolutionItems) = preProject
+		cus.cpp = cus.cpp
+		cus.h = cus.h
+		emp.cpp = emp.cpp
+		emp.h = emp.h
+		equip.cpp = equip.cpp
+		equip.h = equip.h
+		junk.cpp = junk.cpp
+		junk.h = junk.h
+		man.cpp = man.cpp
+		parts.cpp = parts.cpp
+		parts.h = parts.h
+		report.cpp = report.cpp
+		report.h = report.h
+		ticket.cpp = ticket.cpp
+		ticket.h = ticket.h
+		user.cpp = user.cpp
+		user.h = user.h
+		worker.cpp = worker.cpp
+		worker.h = worker.h
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -13,8 +36,8 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{64A665EC-4700-416F-B4DF-5DF2641DE368}.Debug|x64.ActiveCfg = Debug|x64
-		{64A665EC-4700-416F-B4DF-5DF2641DE368}.Debug|x64.Build.0 = Debug|x64
+		{64A665EC-4700-416F-B4DF-5DF2641DE368}.Debug|x64.ActiveCfg = Debug|Win32
+		{64A665EC-4700-416F-B4DF-5DF2641DE368}.Debug|x64.Build.0 = Debug|Win32
 		{64A665EC-4700-416F-B4DF-5DF2641DE368}.Debug|x86.ActiveCfg = Debug|Win32
 		{64A665EC-4700-416F-B4DF-5DF2641DE368}.Debug|x86.Build.0 = Debug|Win32
 		{64A665EC-4700-416F-B4DF-5DF2641DE368}.Release|x64.ActiveCfg = Release|x64
