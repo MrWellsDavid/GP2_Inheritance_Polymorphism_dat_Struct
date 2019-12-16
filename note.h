@@ -1,6 +1,5 @@
 //note.h
 
-#include "time.h"
 #include <string>
 using namespace std;
 
@@ -8,10 +7,6 @@ using namespace std;
 #define NOTE_H
 
 class note {
-	private:
-		string timeSubmitted;
-		string message;
-	
 	public:
 		//Constructors
 		note();
@@ -25,6 +20,12 @@ class note {
 		string getMessage();
 		string getSubmitTime();
 		string printNote();
+		string getWatch();
+		string getDate();
+		string getTime();
+	private:
+		string timeSubmitted;
+		string message;
 };
 
 #endif

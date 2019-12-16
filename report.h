@@ -28,9 +28,4 @@ private:
 	string incompleteEOD();
 };
 
-
-
-
-
-
 #endif
