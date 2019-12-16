@@ -77,19 +77,22 @@ bool startLogin(user** uPTR, int& log, int usr) { // usr is the number of people
 		cout << " \nuser not found\n";
 	return false;
 }
+
 int findUsr(user** uPTR, int usrnum, string uName) {//usrnum is the size of the users vector
 	for (int i = 0; i < usrnum; i++) {
-		if ((*uPTR)->usrID() == uName) // looks for a user name with the id incase there is someone with two of the same name
+		if ((*uPTR) -> getID() /*== uName*/) // looks for a user name with the id incase there is someone with two of the same name currently not working so commented out to compile
 			return i;
 		uPTR++;
 	}
 	return-1;
 }
+
 bool checkPWord(user** uPTR, string pass, int pos) {
 	if ((*uPTR[pos]).getPWord() == pass)
 		return true;
 	return false;
 }
+
 int main(int argc, char** argv) {
 	loginMenu();
 	return 0;

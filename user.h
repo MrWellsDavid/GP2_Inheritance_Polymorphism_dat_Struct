@@ -37,7 +37,4 @@ private:
 	string last;
 	
 };
-
-
-
 #endif
