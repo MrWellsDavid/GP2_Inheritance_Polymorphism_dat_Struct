@@ -20,10 +20,13 @@ public:
 	string view() ; 
 	int getIDNum(int); // increments the previous ID issued
 	string getIDString();
+	string getUsername();
+	
 	//mutators
 	void setName(string, string);
 	void setPWord(string);
 	void setID(int);
+	void setUsername(string);
 	
 
 private:
@@ -35,6 +38,7 @@ private:
 	int idNum; //for incrementation
 	string first;
 	string last;
+	string username;
 	
 };
 #endif

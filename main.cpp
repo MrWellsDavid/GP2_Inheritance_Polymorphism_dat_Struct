@@ -84,7 +84,7 @@ int main(int argc, char** argv) {
 		}
 		system("PAUSE");
 		
-	}while(option != 3);
+	}while(option != 5);
 	
 	return 0;
 }
