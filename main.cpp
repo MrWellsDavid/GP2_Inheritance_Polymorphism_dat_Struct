@@ -19,78 +19,25 @@
 
 using namespace std; 
 
-
-int findUsr(user**, int, string);
-bool startMenu(user**, int&, int);
-string loginMenu();
-bool checkPWord(user**, string, int);
-
-
-string loginMenu() {
-	string uName, pWord;
-	cout << "/t==================== Login ===================="
-		<< "\n\n\tUsername: ";
-	cin >> uName;
-	cout << "\n\tPassword: ";
-	cin >> pWord;
-	return pWord;
+int menu() {
+	int choice;
+	cout << "\t \t \t Main \n "
+		<< "Enter number of choice"
+		<< "1. log equipment in"
+		<< "2. view current status"
+		<< "3. stop work"
+		<< "4. certify(for manager use only)"
+		<< "5. view certified ticket "
+		<< "\t\t:___";
+	cin >> choice;
+	return choice;
 }
 
-bool startLogin(user** uPTR, int& log, int usr) { // usr is the number of people in the system to check against
-	int pos;
-	string uName, pWord;
-	bool access = false;
-	int denyCount = 3; // Number of times that someone can enter a wrong password
+void makeEmp(vector<emp>* empPTR) {
+	string first, last;
+	int security;
+	int choice;
 
-	cout << "\n Login"
-		<< "User Name:\t";
-	cin >> uName;
-	pos = findUsr(uPTR, usr, uName);
-	if (pos != -1) {
-		cout << "\n \t Password: ";
-		cin >> pWord;
-		access = checkPWord(uPTR, pWord, pos);
-		do {
-			if (access == true) {
-				cout << "\n\n\n \t Welcome.\n\n\n";
-				system("PAUSE");
-				log = pos;
-				return true;
-			}
-			else {
-				cout << "DENIED\n"
-					<< "you have tried:" << denyCount << "attemps MAY be limited"
-					<< "enter the password you now remember:";
-				cin >> pWord;
-				denyCount++;
-			}
-			access = checkPWord(uPTR, pWord, pos);
-		} while (denyCount <= 5);
-		if (access == true) {
-			cout << "\n\n\n \t Welcome.\n\n\n";
-			system("PAUSE");
-			log = pos;
-			return true;
-		}
-	}
-	else
-		cout << " \nuser not found\n";
-	return false;
-}
-
-int findUsr(user** uPTR, int usrnum, string uName) {//usrnum is the size of the users vector
-	for (int i = 0; i < usrnum; i++) {
-		if ((*uPTR) -> getID() /*== uName*/) // looks for a user name with the id incase there is someone with two of the same name currently not working so commented out to compile
-			return i;
-		uPTR++;
-	}
-	return-1;
-}
-
-bool checkPWord(user** uPTR, string pass, int pos) {
-	if ((*uPTR[pos]).getPWord() == pass)
-		return true;
-	return false;
 }
 
 int main(int argc, char** argv) {

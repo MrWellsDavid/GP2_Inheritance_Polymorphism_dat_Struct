@@ -23,7 +23,6 @@
     <ClCompile Include="emp.cpp" />
     <ClCompile Include="equip.cpp" />
     <ClCompile Include="junk.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="man.cpp" />
     <ClCompile Include="note.cpp" />
     <ClCompile Include="parts.cpp" />
