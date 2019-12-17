@@ -48,6 +48,31 @@ void makeEmp(vector<emp>* empPTR) {
 }
 
 int main(int argc, char** argv) {
-	menu();
+	int option;
+	int rec = 0;
+	
+	do
+	{
+		system("CLS");
+		option = menu();
+		
+		switch(option)
+		{
+			case 1:
+				break;
+			case 2: 
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+			case 5:
+				break;
+			default : cout <<"Invalide choice!\n";	
+		}
+		system("PAUSE");
+		
+	}while(option != 3);
+	
 	return 0;
 }
