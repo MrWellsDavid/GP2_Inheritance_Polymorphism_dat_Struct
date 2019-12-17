@@ -36,11 +36,18 @@ int menu() {
 void makeEmp(vector<emp>* empPTR) {
 	string first, last;
 	int security;
-	int choice;
+
+	cout <<"\t \t \t Employee \n"
+		 <<"Enter Employee first name: \n";
+	cin >> first;
+	cout <<"Enter Employee last name: \n";
+	cin >> last;
+	cout <<"Are you adept? (1 for no 2 for mabey)\n";
+	cin >> security;
 
 }
 
 int main(int argc, char** argv) {
-	loginMenu();
+	menu();
 	return 0;
 }
