@@ -21,14 +21,13 @@ using namespace std;
 
 int menu() {
 	int choice;
-	cout << "\t \t \t Main \n "
-		<< "Enter number of choice"
-		<< "1. log equipment in"
-		<< "2. view current status"
-		<< "3. stop work"
-		<< "4. certify(for manager use only)"
-		<< "5. view certified ticket "
-		<< "\t\t:___";
+	cout << "\t \t \t Main \n"
+		 << "1. log equipment in\n"
+		 << "2. view current status\n"
+		 << "3. stop work\n"
+		 << "4. certify(for manager use only)\n"
+		 << "5. view certified ticket\n"
+		 << "Enter choice: ";
 	cin >> choice;
 	return choice;
 }
