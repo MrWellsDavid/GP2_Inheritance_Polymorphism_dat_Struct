@@ -32,6 +32,18 @@ int menu() {
 	return choice;
 }
 
+void writeToFile(string first, string last, int security)
+{
+	int count;
+	ofstream outData;
+	outData.open("Employees.txt");
+	for (int i =0; i < count; i++)
+	{
+		outData << first << " " << last << " " << security << endl;
+	}
+	outData.close();
+}
+
 void makeEmp(vector<emp>* empPTR) {
 	string first, last;
 	int security;
@@ -43,7 +55,8 @@ void makeEmp(vector<emp>* empPTR) {
 	cin >> last;
 	cout <<"Are you adept? (1 for no 2 for mabey)\n";
 	cin >> security;
-
+	
+	writeToFile(first, last, security);
 }
 
 int main(int argc, char** argv) {
