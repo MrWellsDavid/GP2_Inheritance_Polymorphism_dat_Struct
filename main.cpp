@@ -27,36 +27,59 @@ int menu() {
 		 << "3. stop work\n"
 		 << "4. certify(for manager use only)\n"
 		 << "5. view certified ticket\n"
+		 << "6. Create Employee\n"
+		 << "7. View Employees\n"
 		 << "Enter choice: ";
 	cin >> choice;
 	return choice;
 }
 
-void writeToFile(string first, string last, int security)
+void writeToFile(string first, string last, int id, int exp)
 {
-	int count;
+	int count = 1;
 	ofstream outData;
-	outData.open("Employees.txt");
+	outData.open("Employees.txt", ios::app);
 	for (int i =0; i < count; i++)
 	{
-		outData << first << " " << last << " " << security << endl;
+		outData << first << " " << last << " " << id << " " << exp << endl;
 	}
+	
 	outData.close();
 }
 
-void makeEmp(vector<emp>* empPTR) {
+void makeEmp() {
 	string first, last;
-	int security;
+	int id;
+	int exp;
 
 	cout <<"\t \t \t Employee \n"
 		 <<"Enter Employee first name: \n";
 	cin >> first;
 	cout <<"Enter Employee last name: \n";
 	cin >> last;
-	cout <<"Are you adept? (1 for no 2 for mabey)\n";
-	cin >> security;
+	cout <<"Enter your ID: \n";
+	cin >> id;
+	cout <<"How many years have you worked? \n";
+	cin >> exp;
 	
-	writeToFile(first, last, security);
+	emp(first, last, id, exp);
+	writeToFile(first, last, id, exp);
+}
+
+void viewEmp()
+{
+	string line;
+  	ifstream inData ("Employees.txt");
+  	if (inData.is_open())
+  	{
+	    while ( getline (inData,line) )
+	    {
+	      cout << line << '\n';
+	    }
+	    inData.close();
+	}
+
+  else cout << "Unable to open file"; 
 }
 
 int main(int argc, char** argv) {
@@ -80,11 +103,17 @@ int main(int argc, char** argv) {
 				break;
 			case 5:
 				break;
+			case 6:
+				makeEmp();
+				break;
+			case 7:
+				viewEmp();
+				break;
 			default : cout <<"Invalide choice!\n";	
 		}
 		system("PAUSE");
 		
-	}while(option != 5);
+	}while(option != 8);
 	
 	return 0;
 }
