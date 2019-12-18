@@ -41,7 +41,6 @@ string user::view()
 {
 	string message = "Name:" + first + " " + last + "\n \t\t\t ID: " + getIDString();
 	return message;
-
 }
 
 string user::getName()  { return first + " " + last; }

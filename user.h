@@ -21,24 +21,21 @@ public:
 	int getIDNum(int); // increments the previous ID issued
 	string getIDString();
 	string getUsername();
-	
 	//mutators
 	void setName(string, string);
 	void setPWord(string);
 	void setID(int);
 	void setUsername(string);
-	
 
 private:
 
-	void print();
+	virtual void print();
 	string uName;
 	int usrID;
 	string pWord;
 	int idNum; //for incrementation
 	string first;
 	string last;
-	string username;
 	
 };
 #endif
