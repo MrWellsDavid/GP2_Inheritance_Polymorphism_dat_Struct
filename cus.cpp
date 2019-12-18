@@ -27,6 +27,10 @@ void cus::returnStuff(string name) {
 	}
 }
 
+void user::print(){
+	cout << "customer Id:"<< idNum 
+		<<"first name: "<< first << "last name: "<< "\n" ;
+}
 //Accessors
 string cus::getIDString() {
 	return  "c-" + user::getIDString();
