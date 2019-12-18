@@ -10,6 +10,7 @@ cus::cus() {
 
 cus::cus(string first, string last, int id) {
 	user(first, last, id);
+	newStuff(90210, "myLaptop", "The greatest failure of mankind");
 }
 
 //Mutators
@@ -27,10 +28,6 @@ void cus::returnStuff(string name) {
 	}
 }
 
-void user::print(){
-	cout << "customer Id:"<< idNum 
-		<<"first name: "<< first << "last name: "<< "\n" ;
-}
 //Accessors
 string cus::getIDString() {
 	return  "c-" + user::getIDString();

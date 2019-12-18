@@ -10,20 +10,19 @@ report::report() {
 	
 }
 
-report::report(cus* customer) {
+report::report(cus customer) {
 	system("CLS");
 	cout << consumerReport(customer) << endl;
 	system("PAUSE");
 }
 
 //Functions
-string report::consumerReport(cus* customer) {
-	string message = "";
-	message = customer -> getName() + "\n=========================\n";
-	for (int i = 0; i < customer -> stuff.size(); i++) {
-		message += customer -> stuff[i] -> getName() + ":\n\tAssigned to: " + customer -> stuff[i] -> ticketing -> getAssignee() -> getName() + "\n\tStatus: " + customer -> stuff.at(i) -> ticketing -> getStatusString() + "\n=========================\n";
-	}
+string report::consumerReport(cus customer) {
+	string message;
+	message = customer.getName() + "\n=========================\n" + customer.stuff[1] -> equip::getName() + ":\n\tAssigned to: " + customer.stuff[0] -> ticketing -> getAssignee() -> user::getName() + "\n\tStatus: " + customer.stuff.at(0) -> ticketing -> getStatusString() + "\n=========================\n";
+	return message;
 }
+
 
 string report::endOfDay() {
 	

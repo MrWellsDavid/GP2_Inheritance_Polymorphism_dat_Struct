@@ -14,7 +14,7 @@ class equip {
 		int getSN()const;
 		int getStatus()const;
 		string getSNString()const;
-		string getName()const;
+		string getName();
 		string getDescription()const;
 		string getStatusString()const;
 		//Mutators

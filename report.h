@@ -13,10 +13,10 @@ class report {
 	public:
 		//Constructors
 		report();
-		report(cus*);
+		report(cus);
 		
 		//Functions
-		string consumerReport(cus*);
+		string consumerReport(cus);
 		string endOfDay();
 		string incompleteEOD(ticket*);
 		

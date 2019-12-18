@@ -34,7 +34,7 @@ string equip::getSNString()const{
 	return snstring.str();
 }
 
-string equip::getName()const{
+string equip::getName() {
 	return name;
 }
 

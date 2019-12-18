@@ -43,7 +43,7 @@ void writeToFile2(int sn, string name, int status, string description)
 	outData.open("Equipment.txt", ios::app);
 	for (int i =0; i < count; i++)
 	{
-		outData << sn << "\n" << name << "\n" << status << "\n" << description << "\n-----------------" << endl;
+		outData << "sn: "<< sn << "\n" << "Name: " << name << "\n" << "Status: " << status << "\n" << "Description: " << description << "(1. Open 2.Complete 3.Pending 4.Closed)" <<"\n-----------------" << endl;
 	}
 	
 	outData.close();
@@ -61,7 +61,7 @@ void logEquip()
 	cin >> sn;
 	cout <<"Enter the name: \n";
 	cin >> name;
-	cout <<"Enter the status: \n";
+	cout <<"Enter the status: (1. Open 2.Complete 3.Pending 4.Closed) \n";
 	cin >> status;
 	cout <<"Enter the description: \n";
 	cin >> description;
@@ -116,7 +116,7 @@ void writeToFile3(string first, string last, int id)
 	outData.close();
 }
 
-cus* makeCus() 
+cus makeCus() 
 {
 	string first, last;
 	int id;
@@ -129,7 +129,7 @@ cus* makeCus()
 	cout <<"Enter your ID: \n";
 	cin >> id;
 	
-	cus* cPTR = new cus(first, last, id);
+	cus cPTR = cus(first, last, id);
 	writeToFile3(first, last, id);
 	return cPTR;
 }
@@ -167,7 +167,7 @@ void viewStat()
 int main(int argc, char** argv) 
 {
 	int option;
-	cus* cPTR;
+	cus cPTR;
 	int rec = 0;
 	
 	do
@@ -197,12 +197,9 @@ int main(int argc, char** argv)
 				viewEmp();
 				break;
 			case 8:
-				report* reporting();
-				system("CLS");
-//				cout << reporting -> consumerReport(cPTR) << endl;
-				system("PAUSE");
+				report reporting(cPTR);
 				break;
-			default : cout <<"Invalide choice!\n";	
+//			default : cout <<"Invalide choice!\n";	
 		}
 		system("PAUSE");
 		
