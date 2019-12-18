@@ -49,6 +49,20 @@ void ticket::addNote(string message) {
 	notes.push(adding);
 }
 
+void ticket::setAssignee(worker* assign) {
+	assignee.push_back(assign);
+}
+
+void ticket::removeAssignee(worker* assign) {
+	iter = assignee.begin();
+	for (int i = 0; i < assignee.size(); i++) {
+		if (assignee.at(i) == assign) {
+			assignee.erase(iter);
+		}
+		iter++;
+	}
+}
+
 //Accessors
 int ticket::getID() {
 	return id;
@@ -81,4 +95,8 @@ string ticket::getStatusString() {
 		default:
 			return "ERROR";
 	}
+}
+
+worker* ticket::getAssignee() {
+	return assignee.back();
 }

@@ -1,36 +1,20 @@
 //report.cpp
 
 #include "report.h"
+#include <fstream>
 using namespace std;
 
 //Constructors
 report::report() {
-	setFlag(false);
-}
-
-//Mutators
-void report::setFlag(bool){
 	
 }
 
-void report::setConsumer(){
+//Functions
+string report::consumerReport(cus* customer) {
+	string message = "";
+	message = customer -> getName() + "\n=========================\n";
+	for (int i = 0; i < customer -> stuff.size(); i++) {
+		message += customer -> stuff[i] -> getName() + ":\n\tAssigned to: " + customer -> stuff[i] -> ticketing -> getAssignee() -> getName() + "\n\tStatus: " + customer -> stuff.at(i) -> ticketing -> getStatusString() + "\n=========================\n";
+	}
 	
 }
-
-void report::setEOD(){
-	
-}
-
-//Accessors
-bool report::getFlag(){
-	
-}
-
-string report::getConsumer(){
-	
-}
-
-string report::getEOD(){
-	
-}
-
