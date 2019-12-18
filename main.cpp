@@ -19,47 +19,121 @@
 
 using namespace std; 
 
-int menu() {
+int menu() 
+{
 	int choice;
 	cout << "\t \t \t Main \n"
-		 << "1. log equipment in\n"
-		 << "2. view current status\n"
-		 << "3. stop work\n"
-		 << "4. certify(for manager use only)\n"
-		 << "5. view certified ticket\n"
+		 << "1. Log Equipment in\n"
+		 << "2. View Current Status\n"
+		 << "3. Stop Work\n"
+		 << "4. Certify(for manager use only)\n"
+		 << "5. View Certified Ticket\n"
+		 << "6. Create Employee\n"
+		 << "7. View Employees\n"
 		 << "Enter choice: ";
 	cin >> choice;
 	return choice;
 }
 
-void writeToFile(string first, string last, int security)
+void writeToFile2(int sn, string name, int status, string description)
 {
-	int count;
+	int count = 1;
 	ofstream outData;
-	outData.open("Employees.txt");
+	outData.open("Equipment.txt", ios::app);
 	for (int i =0; i < count; i++)
 	{
-		outData << first << " " << last << " " << security << endl;
+		outData << sn << "\n" << name << "\n" << status << "\n" << description << "\n-----------------" << endl;
 	}
+	
 	outData.close();
 }
 
-void makeEmp(vector<emp>* empPTR) {
+void logEquip()
+{
+	int sn;
+	int status;
+	string name;
+	string description;
+	
+	cout <<"\t \t \t Equipment \n"
+		 <<"Enter the Serial Number: \n";
+	cin >> sn;
+	cout <<"Enter the name: \n";
+	cin >> name;
+	cout <<"Enter the status: \n";
+	cin >> status;
+	cout <<"Enter the description: \n";
+	cin >> description;
+	
+	equip(sn, name, description);
+	writeToFile2(sn, name, status, description);
+}
+
+void writeToFile(string first, string last, int id, int exp)
+{
+	int count = 1;
+	ofstream outData;
+	outData.open("Employees.txt", ios::app);
+	for (int i =0; i < count; i++)
+	{
+		outData << first << " " << last << " " << id << " " << exp << endl;
+	}
+	
+	outData.close();
+}
+
+void makeEmp() 
+{
 	string first, last;
-	int security;
+	int id;
+	int exp;
 
 	cout <<"\t \t \t Employee \n"
 		 <<"Enter Employee first name: \n";
 	cin >> first;
 	cout <<"Enter Employee last name: \n";
 	cin >> last;
-	cout <<"Are you adept? (1 for no 2 for mabey)\n";
-	cin >> security;
+	cout <<"Enter your ID: \n";
+	cin >> id;
+	cout <<"How many years have you worked? \n";
+	cin >> exp;
 	
-	writeToFile(first, last, security);
+	emp(first, last, id, exp);
+	writeToFile(first, last, id, exp);
 }
 
-int main(int argc, char** argv) {
+void viewEmp()
+{
+	string line;
+  	ifstream inData ("Employees.txt");
+  	if (inData.is_open())
+  	{
+	    while ( getline (inData,line) )
+	    {
+	      cout << line << '\n';
+	    }
+	    inData.close();
+	}
+
+  else cout << "Unable to open file"; 
+}
+
+void viewStat()
+{
+	string line;
+	ifstream inData ("Equipment.txt");
+	if (inData.is_open())
+	{
+		while (getline (inData,line))
+		{
+			cout << line << '\n';
+		}
+		inData.close();
+	}
+}
+
+int main(int argc, char** argv) 
+{
 	int option;
 	int rec = 0;
 	
@@ -71,8 +145,10 @@ int main(int argc, char** argv) {
 		switch(option)
 		{
 			case 1:
+				logEquip();
 				break;
 			case 2: 
+				viewStat();
 				break;
 			case 3:
 				break;
@@ -80,11 +156,17 @@ int main(int argc, char** argv) {
 				break;
 			case 5:
 				break;
+			case 6:
+				makeEmp();
+				break;
+			case 7:
+				viewEmp();
+				break;
 			default : cout <<"Invalide choice!\n";	
 		}
 		system("PAUSE");
 		
-	}while(option != 6);
+	}while(option != 8);
 	
 	return 0;
 }
