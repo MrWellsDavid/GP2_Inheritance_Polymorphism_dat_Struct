@@ -23,7 +23,7 @@ class cus: public user {
 		string getIDString();
 		
 
-	private:
+		//Data Structures
 		vector<junk*> stuff;
 		vector<junk*>::iterator iter;
 };

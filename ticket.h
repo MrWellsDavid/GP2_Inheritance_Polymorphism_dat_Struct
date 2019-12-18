@@ -1,6 +1,7 @@
 //ticket.h
 
 #include "note.h"
+#include "worker.h"
 #include <queue>
 #include <string>
 #include <iostream>
@@ -22,12 +23,19 @@ class ticket {
 		bool setStatus(int);
 		void closeTicket();
 		void addNote(string);
+		void setAssignee(worker*);
+		void removeAssignee(worker*);
 		
 		//Accessors
 		int getID();
 		string getIDString();
 		int getStatus();
 		string getStatusString();
+		worker* getAssignee();
+		
+		//Data Structure
+		vector<worker*> assignee;
+		vector<worker*>::iterator iter;
 
 	private:
 		int id;

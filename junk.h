@@ -1,6 +1,7 @@
 //junk.h
 
 #include "equip.h"
+#include "ticket.h"
 #include "worker.h"
 #include <vector>
 #include <iterator>
@@ -15,16 +16,9 @@ class junk: public equip {
 		junk();
 		junk(int, string, string);
 		
-		//Mutator
-		void setAssignee(worker*);
-		void removeAssignee(worker*);
+		//Data Structure
+		ticket* ticketing;
 		
-		//Accessor
-		worker* getAsignee();
-		
-	private:
-		vector<worker*> assignee;
-		vector<worker*>::iterator iter;
 };
 
 #endif

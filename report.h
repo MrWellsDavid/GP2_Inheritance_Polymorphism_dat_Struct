@@ -1,5 +1,8 @@
 //report.h
 
+#include "cus.h"
+#include "ticket.h"
+#include <vector>
 #include <string>
 using namespace std;
 
@@ -8,24 +11,14 @@ using namespace std;
 
 class report {
 	public:
-		//constructors
+		//Constructors
 		report();
 		
-		//accessors
-		bool getFlag();
-		string getConsumer();
-		string getEOD();
+		//Functions
+		string consumerReport(cus*);
+		string endOfDay(ticket*);
+		string incompleteEOD(ticket*);
 		
-		//mutators
-		void setFlag(bool);
-		void setConsumer();
-		void setEOD();
-	
-	private:
-		bool hrFlag;
-		string consumerReport();
-		string endOfDay();
-		string incompleteEOD();
 };
 
 #endif
