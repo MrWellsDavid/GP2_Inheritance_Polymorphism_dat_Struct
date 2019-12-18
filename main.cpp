@@ -42,7 +42,7 @@ void writeToFile2(int sn, string name, int status, string description)
 	outData.open("Equipment.txt", ios::app);
 	for (int i =0; i < count; i++)
 	{
-		outData << sn << "\n" << name << "\n" << status << "\n" << description << "\n-----------------" << endl;
+		outData << "sn: "<< sn << "\n" << "Name: " << name << "\n" << "Status: " << status << "\n" << "Description: " << description << "(1. Open 2.Complete 3.Pending 4.Closed)" <<"\n-----------------" << endl;
 	}
 	
 	outData.close();
@@ -60,7 +60,7 @@ void logEquip()
 	cin >> sn;
 	cout <<"Enter the name: \n";
 	cin >> name;
-	cout <<"Enter the status: \n";
+	cout <<"Enter the status: (1. Open 2.Complete 3.Pending 4.Closed) \n";
 	cin >> status;
 	cout <<"Enter the description: \n";
 	cin >> description;
