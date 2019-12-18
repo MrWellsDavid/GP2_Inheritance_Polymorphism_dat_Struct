@@ -19,10 +19,8 @@ report::report(cus* customer) {
 //Functions
 string report::consumerReport(cus* customer) {
 	string message = "";
-	message = customer -> getName() + "\n=========================\n";
-	for (int i = 0; i < customer -> stuff.size(); i++) {
-		message += customer -> stuff[i] -> getName() + ":\n\tAssigned to: " + customer -> stuff[i] -> ticketing -> getAssignee() -> getName() + "\n\tStatus: " + customer -> stuff.at(i) -> ticketing -> getStatusString() + "\n=========================\n";
-	}
+	message = customer -> getName() + "\n=========================\n" + customer -> stuff[0] -> getName() + ":\n\tAssigned to: " + customer -> stuff[0] -> ticketing -> getAssignee() -> getName() + "\n\tStatus: " + customer -> stuff[1] -> ticketing -> getStatusString() + "\n=========================\n";
+	return message;
 }
 
 string report::endOfDay() {
