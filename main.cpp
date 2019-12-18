@@ -25,12 +25,11 @@ int menu()
 	cout << "\t \t \t Main \n"
 		 << "1. Log Equipment in\n"
 		 << "2. View Current Status\n"
-		 << "3. Create Customer Ticket"
+		 << "3. Stop Work\n"
 		 << "4. Certify(for manager use only)\n"
 		 << "5. View Certified Ticket\n"
 		 << "6. Create Employee\n"
 		 << "7. View Employees\n"
-		 << "8. Create Report\n"
 		 << "Enter choice: ";
 	cin >> choice;
 	return choice;
@@ -184,7 +183,6 @@ int main(int argc, char** argv)
 				viewStat();
 				break;
 			case 3:
-				cPTR = makeCus();
 				break;
 			case 4:
 				break;
@@ -203,7 +201,7 @@ int main(int argc, char** argv)
 		}
 		system("PAUSE");
 		
-	}while(option != 9);
+	}while(option != 8);
 	
 	return 0;
 }
